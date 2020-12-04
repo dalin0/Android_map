@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+
+    <LinearLayout
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:layout_weight="2"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/search_view_bg"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <AutoCompleteTextView
+            android:id="@+id/keyWord"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="@drawable/search_edit_bg"
+            android:drawableLeft="@mipmap/icon_edit_search"
+            android:drawablePadding="10dp"
+            android:hint="请输入关键字"
+            android:maxLines="1"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:textColorHint="#9B9B9B"
+            android:textSize="12sp"
+            android:focusable="true"
+            android:imeOptions="actionDone"
+            android:inputType="text|textAutoComplete"
+            android:dropDownVerticalOffset="1.0dip"/>
+
+        <ImageView
+            android:id="@+id/search_edit_delete"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/icon_search_cancel"/>
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="60dp"
+            android:text="取 消"
+            android:paddingLeft="15dp"
+            android:paddingTop="18dp"
+            android:textColor="#9B9B9B"
+            android:textSize="18dp"
+            android:background="@drawable/search_edit_bg"/>
+
+    </LinearLayout>
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="340dp" />
+
+
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/map"
+        android:layout_weight="1"
+        android:cacheColorHint="#00000000"
+        android:dividerHeight="1px"
+        android:divider="@android:color/darker_gray"/>
+
+</RelativeLayout>
