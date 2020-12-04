@@ -8,7 +8,10 @@
     tools:context=".MainActivity">
 
 
-
+    <com.amap.api.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="340dp" />
 
     <LinearLayout
         android:layout_width="370dp"
@@ -26,7 +29,7 @@
             android:layout_height="60dp"
             android:layout_weight="1"
             android:background="@drawable/search_edit_bg"
-            android:drawableLeft="@mipmap/icon_edit_search"
+            android:drawableLeft="@mipmap/ic_search"
             android:drawablePadding="10dp"
             android:hint="请输入关键字"
             android:maxLines="1"
@@ -41,27 +44,16 @@
             android:dropDownVerticalOffset="1.0dip"/>
 
         <ImageView
-            android:id="@+id/search_edit_delete"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:src="@mipmap/icon_search_cancel"/>
-
-        <TextView
-            android:layout_width="80dp"
-            android:layout_height="60dp"
-            android:text="取 消"
-            android:paddingLeft="15dp"
-            android:paddingTop="18dp"
-            android:textColor="#9B9B9B"
-            android:textSize="18dp"
-            android:background="@drawable/search_edit_bg"/>
+            android:id="@+id/clean_keywords"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/ic_close"
+            android:visibility="gone"
+            />
 
     </LinearLayout>
-
-    <com.amap.api.maps.MapView
-        android:id="@+id/map"
-        android:layout_width="match_parent"
-        android:layout_height="340dp" />
 
 
 
